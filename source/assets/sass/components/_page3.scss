@@ -1,0 +1,103 @@
+#wireframe{
+
+    @include background-gradient(#fb2b69, #ff5b38, horizontal);
+    background-position: bottom;
+
+    h2 {
+      font-family: 'GothamXLight';
+      font-size: 58px;
+      color: white;
+      //line-height: 50px;
+      padding-bottom: 35px;
+      padding-top: 100px;
+      position: relative; /*for creating a border*/
+
+      /*for creating a "shorter" border, you will create a div*/
+      &:after {
+        content: ''; /*the div's content must be empty.*/
+        position: absolute;
+        width: 5%;
+        height: 3px;
+        background: white;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+  .swiper-container {
+    padding-bottom: 10%;
+
+    p {
+      font-size: 16px;
+      font-family: 'RobotoSlab-Regular';
+      color: white;
+      line-height: 35px;
+      margin-top: 35px;
+    }
+
+    .swiper-button-prev {
+      background: url(../img/left-button.png) no-repeat;
+      cursor: pointer;
+      max-width: 100px;
+      max-height: 50px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      left: auto;
+      margin-top: 350px;
+
+      @media (max-width: 480px) {
+        //width: 50%;
+        //height: 50%;
+        //margin-top: 20%;
+      }
+
+      @media (max-width: 992px) {
+        margin-left: 5%;
+        margin-top: 30%;
+      }
+
+      //margin-right: 110px;
+      //margin-top: 100px;
+      //margin-bottom: 260px;
+    }
+
+    .swiper-button-next {
+      background: url(../img/right-button.png) no-repeat;
+      cursor: pointer;
+      max-width: 100px;
+      max-height: 50px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      right: auto;
+      margin-top: 350px;
+      margin-left: 115px;
+
+      @media (max-width: 480px) {
+        //width: 50%;
+        //height: 50%;
+        //margin-top: 20%;
+      }
+
+      @media (max-width: 992px) {
+        margin-left: 75%;
+        margin-top: 30%;
+      }
+    }
+
+    .slide-image {
+      margin-left: 40px;
+      max-width: 766px;
+      max-height: 852px;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: 992px) {
+        width: 75%;
+        height: 75%;
+        margin-left: 23.5%;
+      }
+    }
+  }
+  }

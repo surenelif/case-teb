@@ -1,0 +1,139 @@
+#wall{
+  margin-top: 120px;
+
+  h4{
+    font-family: 'GothamMedium';
+    font-size: 18px;
+    line-height: 35px;
+  }
+  p{
+    font-family: 'RobotoSlab-Regular';
+    font-size: 16px;
+    line-height: 35px;
+  }
+
+  .tabs {
+    height: 300px;
+    margin-left: 75px;
+
+    .tab {
+      margin-left: -40px;
+      @include transition(200ms);
+      max-width: 178px;
+      max-height: 178px;
+      width: 100%;
+      height: 100%;
+
+      &.active {
+        margin-top: -20px;
+
+       .brick{
+         opacity:1.0;
+
+         //for the "box shadow":
+         -webkit-box-shadow: 20px 55px 37px -1px rgba(191,191,191,1);
+         -moz-box-shadow: 20px 55px 37px -1px rgba(191,191,191,1);
+         box-shadow: 20px 55px 37px -1px rgba(191,191,191,1);
+
+       }
+      }
+
+      .brick{
+        max-height: 178px;
+        max-width: 178px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+
+        //for the "box shadow":
+        -webkit-box-shadow: 20px 34px 37px -1px rgba(191,191,191,1);
+        -moz-box-shadow: 20px 34px 37px -1px rgba(191,191,191,1);
+        box-shadow: 20px 34px 37px -1px rgba(191,191,191,1);
+
+        &.active {
+          opacity: 1.0;
+        }
+      }
+    }
+  }
+
+  .brick-detail {
+    margin-top: 0;
+    padding-top: 0;
+
+    .area {
+      display: none;
+      margin-bottom: 250px;
+      padding: 50px;
+      vertical-align: middle;
+
+      &.active {
+        display: block;
+        //background-image: url("../img/brick-detail.png");
+        //background-position: center;
+        //background-size: contain;
+        //background-repeat: no-repeat;
+
+        border-radius: 15px;
+
+        //for the "box shadow":
+        -webkit-box-shadow: 0px 0px 71px 13px rgba(191, 191, 191, 0.81);
+        -moz-box-shadow: 0px 0px 71px 13px rgba(191, 191, 191, 0.81);
+        box-shadow: 0px 0px 71px 13px rgba(191, 191, 191, 0.81);
+      }
+    }
+  }
+}
+
+#app-store{
+
+  @include background-gradient(#ff5b37, #fb2b2b, horizontal);
+  height: 280px;
+  .main-content {
+    position: relative;
+
+    .logo{
+      margin-top: 3%; //30px;
+      margin-bottom: 0;
+      margin-bottom: -3%;
+      margin-left: -3%;
+
+      .teb-logo {
+        max-width: 187px;
+        max-height: 187px;
+        width: 100%;
+        height: 100%;
+
+        //for the "box shadow":
+
+      }
+    }
+
+    .teb-app-store{
+      font-family: 'GothamXLight';
+      font-size: 38px;
+      color: white;
+      line-height: 45px;
+    }
+
+    .app-store {
+      display: inline;
+      position: absolute;
+      right: 0;
+      top: -110px;
+      bottom: 0;
+
+      .phone{
+        max-width: 760px;
+        max-height: 400px;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width:992px) {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+
+/* input field groups by type */
+$text_fields: 'input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], textarea';
+$checkable_fields: 'input[type="checkbox"], input[type="radio"]';
+$media_fields: 'input[type="file"], input[type="image"]';
+
+input[type=text]::-ms-clear,
+input[type=text]::-ms-reveal,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+
+#{$text_fields} {
+
+}
+#{$checkable_fields} {
+
+}
+#{$media_fields} {
+
+}

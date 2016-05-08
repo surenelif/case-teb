@@ -1,0 +1,8 @@
+html, body {@include htmlreset;}
+body {
+	@include bodyreset;
+}
+
+.guideline-wrapper {
+	margin: 10px;
+}

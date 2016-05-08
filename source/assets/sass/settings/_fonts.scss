@@ -1,0 +1,87 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
+
+ @font-face {
+    font-family: GothamMedium;
+    src:  url('../fonts/GothamMedium.woff') format('woff'),
+          url('../fonts/GothamMedium.ttf') format('truetype');
+    //font-weight: $font-weight;
+    //font-style: $font-style;
+  }
+
+@font-face {
+  font-family: 'GothamXLight';
+  src:  url('../fonts/GothamXLight.woff') format('woff'),
+        url('../fonts/GothamXLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoSlab-Regular';
+  src:  url('../fonts/RobotoSlab-Regular.woff') format('woff'),
+  url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoSlab-Bold';
+  src:  url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+  url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+}
+
+$boldfontfamily: '../fonts/montserrat/montserrat-bold';
+$semiboldfontfamily: '../fonts/montserrat/montserrat-semibold';
+$regularfontfamily: '../fonts/montserrat/montserrat-regular';
+$lightfontfamily: '../fonts/montserrat/montserrat-light';
+$ultralightfontfamily: '../fonts/montserrat/montserrat-ultralight';
+
+@include font-face(ultralight, $ultralightfontfamily, 200, normal);
+@include font-face(light, $lightfontfamily, 300, normal);
+@include font-face(regular, $regularfontfamily, 400, normal);
+@include font-face(semibold, $semiboldfontfamily, 600, normal);
+@include font-face(bold, $boldfontfamily, 700, normal);
+
+@mixin ultralight {
+  font-family: 'ultralight', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+@mixin light {
+  font-family: 'light', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin regular {
+  font-family: 'regular', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin semibold {
+  font-family: 'semibold', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+@mixin bold {
+  font-family: 'bold', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,30 @@
+$grid-columns: 12;
+
+$breakpoints: (
+	small 	: 480px,
+	medium 	: 720px,
+	large 	: 960px,
+	wide 		: 1200px
+);
+
+@mixin breakpoint($name) {
+	@if not map-has-key($breakpoints, $name) {
+		@warn "Uyarı: `#{$name}` geçerli breakpoint ismi değil!";
+	} @else {
+
+		@media (min-width: map-get($breakpoints, $name)) {
+			@for $i from 1 through $grid-columns {      
+				.column-#{$i} {
+					width: 100% / $grid-columns * $i;
+					}
+				}
+			}
+		}
+	}
+
+/*
+	@include breakpoint(small);
+	@include breakpoint(medium);
+	@include breakpoint(large);
+	@include breakpoint(wide);
+*/

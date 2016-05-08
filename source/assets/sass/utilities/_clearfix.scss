@@ -1,0 +1,25 @@
+%clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {clear: both;}
+}
+
+.row.no-gutter {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+	
+	[class*="col-"] {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+}
+
+.center-block {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
